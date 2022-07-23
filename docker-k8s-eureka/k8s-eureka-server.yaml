@@ -16,7 +16,7 @@ spec:
       containers:
       - name: eureka-server
         image: registry.cn-hongkong.aliyuncs.com/ggwhy/eureka:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - name: http
           containerPort: 10001

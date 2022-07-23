@@ -15,7 +15,7 @@ spec:
       containers:
       - name: app002
         image: registry.cn-hongkong.aliyuncs.com/ggwhy/app002:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - name: http
           containerPort: 10012
@@ -27,8 +27,10 @@ metadata:
 spec:
   selector:
     app: app002
+  type: NodePort
   ports:
   - name: http
     port: 10012
     targetPort: 10012
+    nodePort: 30012
 
